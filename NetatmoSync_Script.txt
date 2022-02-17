@@ -1,0 +1,4 @@
+dom.GetObject("CUxD.CUX2801001:1.CMD_QUERY_RET").State(1);
+dom.GetObject("CUxD.CUX2801001:1.CMD_SETS").State("tclsh /usr/local/addons/netatmo/netatmo_new.tcl  -clientid <ihre_netatmo_clientid> -clientsecret <ihr_netatmo_clientsecret> -username <ihr_netatmo_account_user> -password <ihr netatmo_account_passwort> -deviceid <ihre_netatmo_innenmodul_id> -moduleid <ihre_netatmo_aussenmodul_id> -windid <ihre_netatmo_windmodul_id> -rainid <ihre_netatmo_regenmodul_id> -z1moduleid <ihre_netatmo_zusatzmodul1_id> -z2moduleid <ihre_netatmo_zusatzmodul2_id> -z3moduleid <ihre_netatmo_zusatzmodul3_id>");
+var v = dom.GetObject("CUxD.CUX2801001:1.CMD_RETS").State();
+WriteLine(v);
