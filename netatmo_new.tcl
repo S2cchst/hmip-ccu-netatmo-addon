@@ -479,5 +479,10 @@ if {$z3moduleid != "XX:XX:XX:XX:XX:XX"} {
     append rega_cmd "Z3ICO2.State('$z3ico2');"
 }
 
+# configure SyncTimer
+append rega_cmd "var sdatetime = system.Date('%d.%m.%Y %H:%M:%S');"
+append rega_cmd "var netatmosynctime = dom.GetObject('SyncTime');"
+append rega_cmd "netatmosynctime.Variable(sdatetime.ToString());"
+
 # push module data to ccu
 rega_script $rega_cmd
